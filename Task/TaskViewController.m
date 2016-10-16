@@ -6,13 +6,13 @@
 //  Copyright © 2016 8. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TaskViewController.h"
 
-@interface ViewController ()
+@interface TaskViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TaskViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
