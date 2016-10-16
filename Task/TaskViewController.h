@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TaskViewController : UIViewController
+<UITextFieldDelegate>
 {
     IBOutlet UILabel * resultLabel;
-    IBOutlet UILabel * numOfCalcabel;
+    IBOutlet UILabel * numOfCalcLabel;
     IBOutlet UITextField * inputField;
 }
 

@@ -21,7 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds]];
     
     // set rootViewController
-    TaskViewController * tvc = [[TaskViewController alloc] initWithNibName:@"TaskViewController" bundle:nil];
+    TaskViewController * tvc = [[TaskViewController alloc] init];
     
     self.window.rootViewController = tvc;
     [self.window makeKeyAndVisible];
