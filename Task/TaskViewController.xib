@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaskViewController">
             <connections>
                 <outlet property="inputField" destination="3Sh-zL-yaf" id="E75-iW-Tzk"/>
-                <outlet property="numOfCalcabel" destination="qur-oq-0ER" id="WuB-UV-eYS"/>
+                <outlet property="numOfCalcLabel" destination="qur-oq-0ER" id="Ej5-MN-ZIz"/>
                 <outlet property="resultLabel" destination="M2E-kc-5ce" id="dV4-P9-VVf"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ghn-bC-hzo"/>
             </connections>

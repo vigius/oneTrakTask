@@ -15,8 +15,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [inputField setClearsOnInsertion:YES];
-    [inputField setClearsOnBeginEditing:YES];
+    //[inputField setClearsOnInsertion:YES];
+    //[inputField setClearsOnBeginEditing:YES];
     
 }
 
@@ -39,7 +39,7 @@
 
     // output data
     [resultLabel setText: [NSString stringWithFormat:@"%ld", output]];
-    [numOfCalcabel setText:[NSString stringWithFormat:@"%ld", numOfCalc]];
+    [numOfCalcLabel setText:[NSString stringWithFormat:@"%ld", numOfCalc]];
 }
 
 -(IBAction)reset:(id)sender
@@ -47,7 +47,7 @@
     [inputField setText:@"Введи число"];
     [inputField endEditing:YES];
     [resultLabel setText:@"Результат"];
-    [numOfCalcabel setText:@"#"];
+    [numOfCalcLabel setText:@"#"];
 }
 
 -(void)setNumOfCalc:(NSInteger)i
@@ -60,6 +60,11 @@
     else{
         numOfCalc = i - 1;
     }
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [textField setText: @""];
 }
 
 @end

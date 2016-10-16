@@ -11,7 +11,7 @@
 @interface TaskViewController : UIViewController
 {
     IBOutlet UILabel * resultLabel;
-    IBOutlet UILabel * numOfCalcabel;
+    IBOutlet UILabel * numOfCalcLabel;
     IBOutlet UITextField * inputField;
 }
 
