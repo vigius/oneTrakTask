@@ -15,6 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [inputField setClearsOnInsertion:YES];
     [inputField setClearsOnBeginEditing:YES];
     
 }
