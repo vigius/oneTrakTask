@@ -18,6 +18,11 @@
     UIView * view = [[UIView alloc] initWithFrame: vRect];
     [view setBackgroundColor:[UIColor whiteColor]];
     
+    [view setContentMode:UIViewContentModeScaleToFill];
+    [view setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+     UIViewAutoresizingFlexibleHeight];
+
+    
     self.view = view;
 }
 
@@ -36,7 +41,10 @@
     [resultLabel setTextAlignment:NSTextAlignmentCenter];
     [resultLabel setFont: labelFont];
     [resultLabel setText:@"Результат"];
-    
+    [resultLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+                                     UIViewAutoresizingFlexibleBottomMargin |
+                                     UIViewAutoresizingFlexibleRightMargin |
+                                     UIViewAutoresizingFlexibleLeftMargin];
     [self.view addSubview:resultLabel];
     
     // creating numOfCalcLable
@@ -46,7 +54,10 @@
     [numOfCalcLabel setTextAlignment:NSTextAlignmentRight];
     [numOfCalcLabel setFont: labelFont];
     [numOfCalcLabel setText:@"#"];
-    
+    [numOfCalcLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+                                        UIViewAutoresizingFlexibleBottomMargin |
+                                        UIViewAutoresizingFlexibleLeftMargin |
+                                        UIViewAutoresizingFlexibleRightMargin];
     [self.view addSubview:numOfCalcLabel];
     
     // creating botton startCalculate
@@ -64,6 +75,10 @@
                   action:@selector(startCalc:)
         forControlEvents:UIControlEventTouchUpInside];
     
+    [startCalc setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+                                   UIViewAutoresizingFlexibleBottomMargin |
+                                   UIViewAutoresizingFlexibleRightMargin |
+                                   UIViewAutoresizingFlexibleLeftMargin];
     [self.view addSubview:startCalc];
     
     // creating botton reset
@@ -80,6 +95,10 @@
     [resetCalc addTarget:self
                   action:@selector(reset:)
         forControlEvents:UIControlEventTouchUpInside];
+    [resetCalc setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+                                   UIViewAutoresizingFlexibleBottomMargin |
+                                   UIViewAutoresizingFlexibleRightMargin |
+                                   UIViewAutoresizingFlexibleLeftMargin];
     [self.view addSubview:resetCalc];
     
     // creating text field
@@ -98,6 +117,10 @@
     [inputField setTextAlignment:NSTextAlignmentCenter];
     [inputField setTextColor:llgreyColor];
     [inputField setText:@"Введите число"];
+    [inputField setAutoresizingMask:UIViewAutoresizingFlexibleWidth |
+                                    UIViewAutoresizingFlexibleBottomMargin |
+                                    UIViewAutoresizingFlexibleRightMargin |
+                                    UIViewAutoresizingFlexibleLeftMargin];
     
     [self.view addSubview:inputField];
 
@@ -127,6 +150,8 @@
 
 -(IBAction)reset:(id)sender
 {
+    UIColor * llgreyColor = [UIColor colorWithRed:230/250 green:230/250 blue:230/250 alpha:0.13];
+    [inputField setTextColor:llgreyColor];
     [inputField setText:@"Введите число"];
     [inputField endEditing:YES];
     [resultLabel setText:@"Результат"];
@@ -148,7 +173,7 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     [textField setText:@""];
-    
+    [textField setTextColor:[UIColor blackColor]];
 }
 
 @end
