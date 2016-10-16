@@ -40,7 +40,7 @@
 
 -(IBAction)reset:(id)sender
 {
-    [inputField setText:@"Введи число"];
+    [inputField setText:@"Введите число"];
     [inputField endEditing:YES];
     [resultLabel setText:@"Результат"];
     [numOfCalcLabel setText:@"#"];
