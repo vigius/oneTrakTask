@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface TaskViewController : UIViewController
+{
+    IBOutlet UILabel * resultLabel;
+    IBOutlet UILabel * numOfCalcabel;
+    IBOutlet UITextField * inputField;
+}
 
+@property(nonatomic) NSInteger targetNum;
+@property(nonatomic) NSInteger numOfCalc;
+
+-(IBAction)startCalc:(id)sender;
+-(IBAction)reset:(id)sender;
 
 @end
